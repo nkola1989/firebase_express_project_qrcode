@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+        Comandi su Node che possono tornare utili per avviare questo progetto:
+        1) creo un certificato (con SSL installato)
+             openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem
+        2) per aprire il server in https eseguo :
+            $ http-server -S -C cert.pem -o
+        3) se da errore installare:
+             npm install -g http-server    
+
+        per usare certificati validi 
+        https://letsencrypt.org/
+
+
+        //progetto della libreria usata
+        https://www.npmjs.com/package/html5-qrcode
+    -->
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- script al codice di funzionamento del qrcode -->
+    <script type="text/javascript" src="/js/script.js"></script>
+    <script type="text/javascript" src="/js/qrcode_reader.js"></script>
+    <!-- Script alla libreria node_modules/html5-qrcode/minified/html5-qrcode.min.js-->
+    <script type="text/javascript"  src="/js/html5-qrcode.min.js">  </script> 
+
+    
+</head>
+<body>
+    <div id="reader" width="600px"> </div>
+    <div id="myDIV"></div>
+    <button id="btn_scan">Scansiona</button>
+    
+  
+    
+</body>
+</html>
